@@ -24,8 +24,8 @@ set(
     "aarch32:arm"
     "arm_hyp:arm" # arm_hyp is legacy hack that might get removed one day
     "aarch64" # use KernelSel4Arch
-    "riscv32:riscv" # no difference between 32/64 bit
-    "riscv64:riscv" # no difference between 32/64 bit
+    "riscv32" # use KernelSel4Arch
+    "riscv64" # use KernelSel4Arch
 )
 # Find the tuple with the mapping information. If KernelSel4Arch is not set at
 # all, matching will fail.

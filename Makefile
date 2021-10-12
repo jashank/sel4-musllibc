@@ -39,8 +39,12 @@ ifeq (${CONFIG_ARCH_AARCH64},y)
     TARGET = aarch64
 endif
 
-ifeq (${CONFIG_ARCH_RISCV},y)
-    TARGET = riscv
+ifeq (${CONFIG_ARCH_RISCV32},y)
+    TARGET = riscv32
+endif
+
+ifeq (${CONFIG_ARCH_RISCV64},y)
+    TARGET = riscv64
 endif
 
 ifeq (${CONFIG_LINK_TIME_OPTIMISATIONS},y)

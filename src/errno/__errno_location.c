@@ -1,8 +1,9 @@
+#include <errno.h>
 #include "pthread_impl.h"
-
-_Thread_local int errno;
 
 int *__errno_location(void)
 {
-	return &errno;
+	return &__pthread_self()->errno_val;
 }
+
+weak_alias(__errno_location, ___errno_location);
